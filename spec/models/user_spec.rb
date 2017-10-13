@@ -21,7 +21,7 @@ RSpec.describe User do
         )
       expect(user).to be_invalid
     end
-    ####THESE ARE SUPPOSE TO FAIL!
+    ####BELOW ARE SUPPOSE TO FAIL!
     it "should not save if last_name field is blank" do
     	user = User.new(
     		first_name:"Shane",
@@ -45,6 +45,13 @@ RSpec.describe User do
     	expect(user2).to be_invalid
     end
     
-    it "should not save if invalid email format"
+    it "should not save if invalid email format" do
+    	user = User.new(
+    		first_name:"Shane",
+    		last_name: "Chang",
+    		email: "dasfsdfasf"
+    		)
+    	expect(user2).to be_invalid
+    end
   end
 end
