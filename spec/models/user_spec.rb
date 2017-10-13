@@ -53,7 +53,7 @@ RSpec.describe User do
     		last_name: "Chang",
     		email: "dasfsdfasf"
     		)
-    	expect(user2).to be_invalid
+    	expect(user).to be_invalid
     end
   end
 end
